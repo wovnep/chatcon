@@ -1,8 +1,82 @@
-.logo.vite:hover {
-    filter: drop-shadow(0 0 2em #747bff);
-  }
-  
-  .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafb);
-  }
-  
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.top-container{
+    height: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-bottom: var(--border);
+}
+.top-username {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    color: var(--secondary-text-color);
+}
+.chat-container {
+    margin-top: 2.1rem;
+    margin-bottom: 2.8rem;
+    position: relative;
+    overflow-y: scroll;
+    user-select: text;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.message-container {
+    display: flex;
+    border-radius: 0.4rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+.message-container:hover {
+    background-color: var(--hover-background);
+}
+.badge-container {
+    display: flex;
+    flex-direction: row;
+}
+.badge {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 0.25rem;
+    user-select: none;
+}
+.username {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+.username:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.input-area {
+    resize: none;
+    overflow: hidden;
+    min-height: 2.5rem;
+    max-height: 50%;
+    outline: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary-background-color);
+    border: var(--border);
+    color: var(--primary-text-color);
+}
+/* .input-area::placeholder {
+    line-height: 2.5rem;
+} */
+.input-area:focus {
+    background-color: var(--primary-background-color);
+}
